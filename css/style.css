@@ -18,7 +18,41 @@ body {
 
 
 .popup-ad {
-    background-color: transparent; /* Pastikan pop-up tidak ada latar belakang */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Background overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's above everything else */
+}
+
+.popup-content {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1010; /* Make sure the content is above the background */
+}
+
+/* Close button adjustments */
+.close-btn-custom {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px; /* Increase size for better visibility */
+    color: #333;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1020; /* Ensure the close button is above other elements */
+}
+
+.close-btn-custom:hover {
+    color: red; /* Make the close button more visible on hover */
 }
 
 
@@ -44,25 +78,11 @@ body {
     position: relative; /* Untuk posisi tombol X */
 }
 
-/* Tombol X dengan class khusus */
-.close-btn-custom {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 18px; /* Ukuran tombol X lebih kecil */
-    background-color: transparent; /* Menghapus background */
-    border: none; /* Menghapus border */
-    color: #333; /* Warna teks tombol X */
-    cursor: pointer;
-    padding: 0; /* Menghapus padding */
-    margin: 0; /* Menghapus margin */
-}
-
-
 
 .popup-ad img {
-    max-width: 100%;
-    max-height: 400px; /* Atur ukuran gambar */
+    max-width: 90%; /* Ensures the image doesn’t exceed 90% of the pop-up’s width */
+    max-height: 80%; /* Keeps the image within 80% of the pop-up’s height */
+    object-fit: contain; /* Prevents the image from getting stretched */
 }
 
 
