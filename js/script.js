@@ -252,3 +252,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+// Ambil elemen pop-up dan tombol X
+const popup = document.querySelector('.popup-ad');
+const closeButton = document.querySelector('.close-btn-custom');
+
+// Fungsi untuk menutup pop-up
+closeButton.addEventListener('click', () => {
+    popup.style.display = 'none'; // Menyembunyikan pop-up saat tombol X ditekan
+});
+
+// Jika Anda ingin menampilkan pop-up (misalnya saat halaman dimuat)
+popup.style.display = 'flex'; // Menampilkan pop-up

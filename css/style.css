@@ -16,6 +16,57 @@ body {
     background-color: #f0f0f0;
 }
 
+
+.popup-ad {
+    background-color: transparent; /* Pastikan pop-up tidak ada latar belakang */
+}
+
+
+/* Gaya untuk pop-up */
+.popup-ad {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang transparan */
+    display: none; /* Tersembunyi pada awalnya */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Pastikan di atas konten */
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative; /* Untuk posisi tombol X */
+}
+
+/* Tombol X dengan class khusus */
+.close-btn-custom {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px; /* Ukuran tombol X lebih kecil */
+    background-color: transparent; /* Menghapus background */
+    border: none; /* Menghapus border */
+    color: #333; /* Warna teks tombol X */
+    cursor: pointer;
+    padding: 0; /* Menghapus padding */
+    margin: 0; /* Menghapus margin */
+}
+
+
+
+.popup-ad img {
+    max-width: 100%;
+    max-height: 400px; /* Atur ukuran gambar */
+}
+
+
+
 /* Container untuk tombol navigasi */
 .navigation-container {
     display: flex;
@@ -772,24 +823,6 @@ button:hover {
     align-items: center;    /* Menyelaraskan elemen di tengah */
 }
 
-/* Style untuk tombol OK */
-.popup-content button {
-    background-color: #4CAF50; /* Warna hijau */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 20px;
-    width: 100%; /* Membuat tombol lebar penuh */
-    max-width: 150px; /* Membatasi lebar tombol */
-}
-
-.popup-content button:hover {
-    background-color: #45a049; /* Efek hover */
-}
 
 /* Tombol close (x) */
 .close-btn {
@@ -919,3 +952,5 @@ footer {
         font-size: 12px;
     }
 }
+
+
