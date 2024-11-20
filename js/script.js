@@ -33,7 +33,7 @@ function showPopup(title, description, images) {
 
     // Update gambar slider di popup
     const carouselImages = document.querySelector('.carousel-images');
-    carouselImages.innerHTML = ''; // Kosongkan kontainer gambar sebelum menambahkan yang baru
+    carouselImages.innerHTML = ''; 
 
     // Menambahkan gambar-gambar dari array images
     images.forEach((imageSrc, index) => {
@@ -71,38 +71,39 @@ function moveSlide(n) {
     showSlideInPopup(slideIndex + n);
 }
 
+//isi reveiw
 const fakeReviews = [
     {
         name: "Andi",
-        email: "andi@example.com",
+        email: "andi42@gmail.com",
         rating: 5,
-        comment: "Sangat puas dengan layanan ini!",
+        comment: "Sangat puas dengan layanan ini! V&J Travel adalah pilihan utamaku untuk berpetualang",
         color: getRandomColor()
     },
     {
         name: "Budi",
-        email: "budi@example.com",
+        email: "budi21@gmail.com",
         rating: 4,
-        comment: "Pengalaman yang menyenangkan!",
+        comment: "Pengalaman yang menyenangkan ditawarkan V&J Travel tak akan pernah kulupakan",
         color: getRandomColor()
     },
     {
         name: "Citra",
-        email: "citra@example.com",
+        email: "citra11@gmail.com",
         rating: 5,
-        comment: "Layanan cepat dan ramah.",
+        comment: "Pelayanan V&J Travel adalah yagn terbaik yang saya alami",
         color: getRandomColor()
     },
     {
         name: "Dewi",
-        email: "dewi@example.com",
+        email: "dewi321@gmail.com",
         rating: 3,
         comment: "Cukup memuaskan, tapi masih bisa lebih baik.",
         color: getRandomColor()
     },
     {
         name: "Eko",
-        email: "eko@example.com",
+        email: "ekopart33@gmail.com",
         rating: 4,
         comment: "Akan merekomendasikan kepada teman!",
         color: getRandomColor()
@@ -112,7 +113,7 @@ const fakeReviews = [
 let currentReviewIndex = 0;
 let autoplayInterval;
 
-// Function to display the current review
+
 function displayFakeReview() {
     const review = fakeReviews[currentReviewIndex];
     document.getElementById('fakeReviewBox').innerHTML = `
@@ -132,39 +133,39 @@ function displayFakeReview() {
     `;
 }
 
-// Function to go to the previous review
+// review sebelum
 function prevReview() {
     currentReviewIndex = (currentReviewIndex - 1 + fakeReviews.length) % fakeReviews.length;
     displayFakeReview();
     resetAutoplay();
 }
 
-// Function to go to the next review
+// review lanjut
 function nextReview() {
     currentReviewIndex = (currentReviewIndex + 1) % fakeReviews.length;
     displayFakeReview();
     resetAutoplay();
 }
 
-// Function to start autoplay
+// autoplay 3 detik
 function startAutoplay() {
     autoplayInterval = setInterval(() => {
         nextReview();
-    }, 3000); // Change slide every 3 seconds
+    }, 3000); 
 }
 
-// Function to stop autoplay
+
 function stopAutoplay() {
     clearInterval(autoplayInterval);
 }
 
-// Function to reset autoplay when navigating manually
+
 function resetAutoplay() {
     stopAutoplay();
     startAutoplay();
 }
 
-// Generate a random color for the profile picture
+// pf warna acak
 function getRandomColor() {
     const letters = '0123456789ABCDEF';
     let color = '#';
@@ -174,11 +175,11 @@ function getRandomColor() {
     return color;
 }
 
-// Initialize the slider
+
 displayFakeReview();
 startAutoplay();
 
-// Optional: Add event listeners for pause on hover
+
 const reviewBox = document.getElementById('fakeReviewBox');
 reviewBox.addEventListener('mouseenter', stopAutoplay);
 reviewBox.addEventListener('mouseleave', startAutoplay);
@@ -187,7 +188,7 @@ let rating = 0;
     
 
    
-// Initialize the first fake review
+
 displayFakeReview();
 
 // Fungsi untuk menghasilkan warna acak
@@ -200,7 +201,7 @@ function getRandomColor() {
     return color;
 }
 
-// Event listener untuk bintang
+
 document.querySelectorAll('.rating span').forEach((star, index) => {
     star.addEventListener('mouseover', () => {
         // Hover untuk mengubah warna bintang sesuai posisi
@@ -208,30 +209,30 @@ document.querySelectorAll('.rating span').forEach((star, index) => {
     });
 
     star.addEventListener('click', () => {
-        // Klik untuk menetapkan rating
+      
         rating = index + 1;
         rate(rating);
     });
 
     star.addEventListener('mouseout', () => {
-        // Mengembalikan bintang ke keadaan semula jika tidak diklik
+      k
         if (rating === 0) {
             rate(0);
         } else {
-            rate(rating); // Menjaga rating tetap
+            rate(rating); 
         }
     });
 });
 
 // Fungsi untuk menampilkan pop-up
 function showPopup(event) {
-    event.preventDefault();  // Mencegah pengiriman form
+    event.preventDefault(); 
     const popup = document.getElementById("subscriptionPopup");
-    popup.style.display = "flex";  // Menampilkan pop-up
+    popup.style.display = "flex";  
 
     // Reset form setelah pop-up ditampilkan
     const form = document.querySelector(".subscription-form form");
-    form.reset(); // Mengosongkan input form
+    form.reset(); 
 }
 
 // Fungsi untuk menutup pop-up dan reset form
@@ -241,3 +242,13 @@ function closePopup() {
 }
 
 
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
