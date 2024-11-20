@@ -1,0 +1,855 @@
+/* Reset margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Mengatur ukuran dan tata letak halaman */
+body {
+    font-family: 'Courier New', monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* Container untuk tombol navigasi */
+.navigation-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap; /* Agar tombol bisa berbaris jika terlalu banyak */
+}
+
+/* Tombol navigasi */
+.navigation-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Efek hover */
+.navigation-button:hover {
+    transform: scale(1.05);
+}
+
+
+/* Container untuk tombol navigasi */
+.navigation-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    padding: 20px;
+    flex-wrap: wrap; /* Agar tombol bisa berbaris jika terlalu banyak */
+}
+
+/* Container untuk tombol navigasi */
+.navigation-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+  flex-wrap: wrap; /* Agar tombol bisa berbaris jika terlalu banyak */
+  position: relative; /* Pastikan tombol tetap berada di atas */
+}
+
+/* Tombol navigasi */
+.navigation-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;  /* Ukuran tombol */
+  height: 200px; /* Mengurangi tinggi tombol */
+  color: white;
+  font-size: 18px; /* Ukuran font */
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  cursor: pointer; /* Menambahkan pointer saat mouse berada di atas tombol */
+  background-size: cover; /* Mengatur background image agar tetap proporsional */
+  background-position: center; /* Menjaga posisi gambar tetap di tengah */
+}
+
+/* Tombol untuk destinasi Lokal */
+.navigation-button[data-destination="lokal"] {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/88/Raja_Ampat%2C_Mutiara_Indah_di_Timur_Indonesia.jpg');
+}
+
+/* Tombol untuk destinasi Eropa */
+.navigation-button[data-destination="eropa"] {
+  background-image: url('https://a.travel-assets.com/findyours-php/viewfinder/images/res70/542000/542297-colosseum.jpg');
+}
+
+/* Tombol untuk destinasi Asia */
+.navigation-button[data-destination="asia"] {
+  background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/9e/2b/0b/chureito-pagoda-and-mt.jpg?w=1200&h=-1&s=1');
+}
+
+/* Tombol untuk destinasi Amerika */
+.navigation-button[data-destination="amerika"] {
+  background-image: url('https://asset.kompas.com/crops/LWQZIFbibsM1aAb1LFHlOy1plTM=/0x15:977x667/1200x800/data/photo/2020/01/05/5e11aed43e19f.jpg');
+}
+
+/* Tombol untuk destinasi Australia */
+.navigation-button[data-destination="australia"] {
+  background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/3b/95/61/photo2jpg.jpg?w=1200&h=-1&s=1');
+}
+
+/* Efek hover */
+.navigation-button:hover {
+  transform: scale(1.05); /* Efek saat hover */
+}
+/* Styling untuk Banner Slideshow */
+.banner-slider {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Pastikan tinggi sesuai dengan kebutuhan */
+    overflow: hidden;
+    margin-bottom: 20px; /* Memberi jarak antara banner dan konten lainnya */
+}
+
+/* Menyusun gambar dalam slideshow */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slides img {
+    width: 100%;      /* Agar gambar memenuhi lebar kontainer */
+    height: 100%;     /* Agar gambar memenuhi tinggi kontainer */
+    object-fit: cover; /* Menjaga agar gambar tidak terdistorsi dan tetap memenuhi area */
+    flex-shrink: 0;    /* Gambar tidak akan mengecil */
+}
+
+/* Tombol untuk navigasi slide */
+/* Tombol untuk navigasi slide */
+.prev, .next {
+    position: absolute;
+    top: 50%; /* Pastikan tombol berada di tengah secara vertikal */
+    transform: translateY(-50%); /* Sesuaikan tombol agar berada tepat di tengah */
+    background-color: rgba(0, 0, 0, 0.5); /* Background hitam transparan */
+    color: white;
+    border: none;
+    padding: 15px; /* Memperbesar area klik tombol */
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%; /* Agar tombol berbentuk lingkaran */
+    font-size: 24px; /* Ukuran ikon panah lebih besar */
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Efek hover untuk tombol */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Mengubah background saat hover */
+}
+
+
+
+
+/* Styling Header */
+header {
+    background-color: #333;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+/* Container untuk menyusun logo dan navigasi */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Styling Logo */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Styling Navigasi */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-left: auto;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f0a500;
+}
+
+
+
+
+/* Profile Section dengan Kotak Hiasan */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f9f6ef;
+    padding: 10px;
+    border-left: 5px solid #d4af37;
+    margin-bottom: 10px;
+}
+
+.profile-pic {
+    color: white;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.profile-info h4 {
+    margin-bottom: 5px;
+}
+
+.rating-stars {
+    color: gold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.comment {
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-left: 5px solid #f00;
+    margin-bottom: 10px;
+}
+
+/* Kotak Review */
+.fake-review, .user-review {
+    position: relative;
+    background-color: #fdfdf5;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    width: 350px;
+}
+
+.rating {
+    display: flex;
+    gap: 5px;
+    margin: 15px 0;
+}
+
+/* Styling dasar untuk bintang */
+.rating span {
+    font-size: 30px;
+    cursor: pointer;
+    color: #ddd; 
+    transition: color 0.3s ease;
+}
+
+/* Hover efek bintang */
+.rating span:hover,
+.rating span:hover ~ span {
+    color: gold; 
+}
+
+/* Styling untuk bintang yang sudah dipilih */
+.rating span.selected {
+    color: gold; 
+}
+
+/* Hover dan aktifkan warna bintang saat di klik */
+.rating span.active {
+    color: gold; 
+}
+
+/* Kotak untuk Review yang sudah Dikirim */
+#submittedReview {
+    border-top: 2px solid #ddd;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+/* Style untuk Tombol Kiri dan Kanan */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px; 
+    height: 30px; 
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+    margin: 10px;
+}
+
+/* Efek hover untuk tombol */
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1); 
+}
+
+/* Efek fokus untuk tombol */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Tombol khusus */
+button.bol {
+    padding: 2px; 
+    width: 50px;
+    background-color: blue; 
+    color: white; 
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 16px; 
+    transition: background-color 0.3s ease;
+}
+
+button.bol:hover {
+    background-color: #45a049; 
+}
+
+/* Mengatur font dan dasar tampilan form */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+/* Gaya untuk judul form */
+form h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+}
+
+/* Kelompokkan elemen input dan textarea agar terlihat rapi */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Gaya untuk input dan textarea */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+textarea {
+    height: 100px;
+}
+
+/* Gaya tombol kirim */
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Container utama untuk paket */
+.package-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+/* Kotak untuk setiap paket wisata */
+.package-item {
+    width: 280px; /* Ukuran kotak lebih kecil */
+    border: 2px solid #ddd; /* Border kotak */
+    border-radius: 10px;
+    overflow: hidden; /* Agar gambar tidak keluar dari kotak */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+}
+
+/* Styling untuk judul */
+.package-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Gambar yang ada di dalam kotak */
+.package-image {
+    width: 100%;
+    height: 180px; /* Sesuaikan dengan ukuran kotak */
+    object-fit: cover; /* Agar gambar tetap proporsional */
+    border-radius: 8px; /* Membulatkan sudut gambar */
+}
+
+/* Deskripsi dan tombol */
+.package-description {
+    margin-top: 10px;
+}
+
+/* Tombol Pelajari Selanjutnya */
+/* Tombol Pelajari Selanjutnya */
+.learn-more {
+    padding: 1px 1px; /* Sesuaikan padding agar lebih kompak */
+    font-size: 12px; /* Ukuran font lebih kecil untuk tombol */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    white-space: nowrap; /* Mencegah teks terpotong atau meluas */
+    text-align: center; /* Mengatur teks agar berada di tengah */
+}
+
+/* Efek hover pada tombol */
+.learn-more:hover {
+    background-color: #0056b3;
+}
+
+.popup-slider {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Sesuaikan dengan kebutuhan ukuran gambar */
+    overflow: hidden;
+}
+
+.popup-image {
+    width: 100%; /* Membuat gambar mengikuti lebar container */
+    height: 100%; /* Gambar akan menyesuaikan dengan tinggi container */
+    object-fit: cover; /* Menjaga proporsi gambar */
+    display: none; /* Sembunyikan gambar secara default */
+}
+
+.popup-image.active {
+    display: block; /* Menampilkan gambar yang aktif */
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 24px;
+    border-radius: 50%;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Mengatur kontainer paket wisata agar bisa digulir secara horizontal */
+.package-container {
+    position: relative;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 10px;
+    gap: 20px; /* Jarak antar item */
+}
+
+.package-items {
+    display: flex;
+    gap: 20px;
+}
+
+.package-item {
+    flex-shrink: 0; /* Agar item tidak mengecil */
+    scroll-snap-align: start;
+    width: 200px; /* Atur lebar item sesuai kebutuhan */
+    text-align: center;
+}
+
+/* Menambahkan style untuk tombol scroll kiri dan kanan */
+.scroll-left, .scroll-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.scroll-left {
+    left: 10px;
+}
+
+.scroll-right {
+    right: 10px;
+}
+
+/* Menambahkan gaya untuk container paket wisata */
+.package-container {
+    display: flex;
+    overflow-x: scroll; /* Membuat kontainer scrollable horizontal */
+    gap: 20px; /* Menambahkan jarak antar item */
+    padding: 20px;
+    justify-content: flex-start;
+}
+
+/* Mengatur tampilan masing-masing item paket wisata */
+.package-item {
+    min-width: 250px; /* Ukuran minimal untuk setiap paket */
+    max-width: 300px; /* Ukuran maksimal */
+    text-align: center;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+/* Mengatur ukuran gambar dalam setiap paket */
+.package-item img {
+    width: 100%; /* Mengatur agar gambar mengikuti lebar kotak */
+    height: auto; /* Menjaga rasio aspek gambar */
+    border-radius: 8px;
+}
+
+/* Menambahkan efek hover pada paket */
+.package-item:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.subscription-form {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fef6e4; /* Warna seperti kertas */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Courier New', Courier, monospace; /* Font seperti notepad */
+    position: relative;
+    background-image: linear-gradient(white 24px, #f2f2f2 24px); /* Garis horizontal */
+    background-size: 100% 25px;
+}
+
+.subscription-form h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.subscription-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #555;
+}
+
+.subscription-form input[type="text"],
+.subscription-form input[type="email"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.subscription-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ff8c00;
+    color: white;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.subscription-form button:hover {
+    background-color: #ff6c00;
+}
+
+/* Optional: Border style untuk efek kertas */
+.subscription-form::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 2px;
+    height: 100%;
+    background: #d54b4b; /* Warna merah seperti spiral */
+}
+
+
+.subscription-form input:focus {
+    border-color: #000000; /* Ganti warna border saat fokus */
+    outline: none;
+}
+
+.subscription-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.subscription-form select:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+
+.subscription-form button {
+    padding: 10px 15px;
+    background-color: #00a108; /* Warna tombol biru */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.subscription-form button:hover {
+    background-color: #0056b3; /* Warna tombol saat hover */
+}
+
+.subscription-form button:active {
+    transform: translateY(1px); /* Efek tombol tertekan */
+}
+
+/* Style for the popup */
+.popup {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Style untuk pop-up */
+.popup {
+    display: none; /* Awalnya tersembunyi */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Style untuk konten pop-up */
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Menyusun elemen secara vertikal */
+    align-items: center;    /* Menyelaraskan elemen di tengah */
+}
+
+/* Style untuk tombol OK */
+.popup-content button {
+    background-color: #4CAF50; /* Warna hijau */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 100%; /* Membuat tombol lebar penuh */
+    max-width: 150px; /* Membatasi lebar tombol */
+}
+
+.popup-content button:hover {
+    background-color: #45a049; /* Efek hover */
+}
+
+/* Tombol close (x) */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+footer {
+    background-color: #000; 
+    width: 100%; 
+    color: #fff;
+    padding: 20px; 
+    text-align: center; 
+}
+
+
+/* Style untuk galeri foto */
+.traveler-gallery {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.traveler-gallery h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.photo-slider {
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+.photo-track {
+    display: flex;
+    gap: 10px;
+    animation: scrollPhotos 15s linear infinite;
+}
+
+.photo-track img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Animasi slider */
+@keyframes scrollPhotos {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

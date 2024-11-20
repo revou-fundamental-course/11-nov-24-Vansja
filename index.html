@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V&J Travel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">V&J Travel</div>
+            <nav class="nav-menu">
+                <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#paket">Tour</a></li>
+                <li><a href="#berlangganan">Berlangganan</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Slideshow Section -->
+        <section id="home" class="home-section">
+            <div class="banner-slider">
+                <div class="slides">
+                    <img src="https://marketplace.canva.com/EAGP9OKuHZ8/1/0/1600w/canva-black-modern-holiday-trip-youtube-thumbnail-L42-WQR70W8.jpg" alt="Slide 1">
+                    <img src="https://images.vexels.com/content/126376/preview/flat-travel-plane-backdrop-836104.png" alt="Slide 2">
+                    <img src="https://asset.kompas.com/crops/FolnZ1p9HNSTJPW0jpXWY-3BeXE=/0x0:4032x2688/1200x800/data/photo/2023/10/24/65378a83de191.jpg" alt="Slide 3">
+                </div>
+                <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+                <button class="next" onclick="plusSlides(1)">&#10095;</button>
+            </div>
+        </section>
+<br>
+<h1>Destinasi</h1>
+<div class="navigation-container">
+    <button class="navigation-button" onclick="showDestinations('lokal')" data-destination="lokal">Lokal</button>
+    <button class="navigation-button" onclick="showDestinations('eropa')" data-destination="eropa">Eropa</button>
+    <button class="navigation-button" onclick="showDestinations('asia')" data-destination="asia">Asia</button>
+    <button class="navigation-button" onclick="showDestinations('amerika')" data-destination="amerika">Amerika</button>
+    <button class="navigation-button" onclick="showDestinations('australia')" data-destination="australia">Australia</button>
+</div>
+</main>
+
+
+        <br>
+        <!-- Sorotan Paket Wisata -->
+        <section id="paket" class="highlight-section" >
+            <h2>Sorotan Paket Wisata</h2>
+            <div class="package-container">
+                <div class="package-items">
+                    <div class="package-item">
+                        <img src="https://awsimages.detik.net.id/community/media/visual/2023/07/19/ilustrasi-pulau-bali_169.jpeg?w=1200" alt="Bali">
+                        <h3>Bali</h3>
+                        <p>Eksplorasi keindahan Bali dengan pantai dan budaya yang kaya.</p>
+                        <div class="details">
+                            <p>Harga: Rp 5.000.000</p>
+                            <p>Durasi: 4 Hari 3 Malam</p>
+                            <p>Maks Tamu: 20 orang</p>
+                        </div>
+                    </div>
+                    <div class="package-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRExRhfJAJ3fmREbv2l9qPcoS-XfLuO32yp0Q&s" alt="Raja Ampat">
+                        <h3>Raja Ampat</h3>
+                        <p>Menikmati keindahan alam bawah laut Raja Ampat yang memukau.</p>
+                        <div class="details">
+                            <p>Harga: Rp 7.000.000</p>
+                            <p>Durasi: 5 Hari 4 Malam</p>
+                            <p>Maks Tamu: 10 orang</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="package-item">
+                        <img src="https://content.fun-japan.jp/renewal-prod/cms/articles/content/8801-1jpg_2020-10-19-12-35-24.jpg" alt="Tokyo">
+                        <h3>Tokyo</h3>
+                        <p>Menikmati keindahan kota modern Tokyo dengan budaya yang unik.</p>
+                        <div class="details">
+                            <p>Harga: Rp 12.000.000</p>
+                            <p>Durasi: 6 Hari 5 Malam</p>
+                            <p>Maks Tamu: 20 orang</p>
+                        </div>
+                    </div>
+                    <div class="package-item">
+                        <img src="https://www.kayak.co.id/rimg/dimg/62/28/22c46ab3-city-3286-164700d5d0b.jpg?width=1366&height=768&xhint=1506&yhint=1211&crop=true" alt="Beijing">
+                        <h3>Beijing</h3>
+                        <p>Menjelajahi sejarah Tembok Besar China dan Kota Terlarang di Beijing.</p>
+                        <div class="details">
+                            <p>Harga: Rp 8.500.000</p>
+                            <p>Durasi: 5 Hari 4 Malam</p>
+                            <p>Maks Tamu: 18 orang</p>
+                        </div>
+                    </div>
+                    <div class="package-item">
+                        <img src="https://cdn0-production-images-kly.akamaized.net/2ck4c2f8HkoDBpdDcaIEGV4ude4=/1200x900/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/2385815/original/045137000_1539769271-1.jpg" alt="Singapore">
+                        <h3>Singapore</h3>
+                        <p>Kunjungi ikon-ikon terkenal di Singapore, seperti Marina Bay Sands dan Gardens by the Bay.</p>
+                        <div class="details">
+                            <p>Harga: Rp 4.500.000</p>
+                            <p>Durasi: 3 Hari 2 Malam</p>
+                            <p>Maks Tamu: 25 orang</p>
+                        </div>
+                    </div>
+                    
+            </div>
+        </section>
+        <br>
+
+        <!-- Form Langganan -->
+        <section id="berlangganan">
+<div class="subscription-form">
+    <h3>Berlangganan</h3>
+    <form id="subscriptionForm" onsubmit="showPopup(event)">
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="name" required placeholder="Masukkan nama Anda">
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Masukkan email Anda">
+        <label for="destination">Pilih Destinasi Favorit</label>
+    
+        <select id="destination" name="destination" required>
+        <option value="">-- Pilih Destinasi --</option>
+        <option value="bali">Bali</option>
+        <option value="raja_ampat">Raja Ampat</option>
+        <option value="tokyo">Tokyo</option>
+        <option value="beijing">Beijing</option>
+        <option value="singapore">Singapore</option>
+    </select>
+        <button type="submit">Langganan</button>
+    </form>
+</div>
+        </section>
+    </div>
+    <!-- Pop-up -->
+<div id="subscriptionPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <p>Terima kasih telah berlangganan V&J Travel, Anda akan selalu update bersama kami!</p>
+        <!-- Tombol OK -->
+        <button onclick="closePopup()">OK</button>
+    </div>
+</div>
+
+    <br>
+    <h1>Review</h1>
+</section>
+<br>
+        <!-- Review Section -->
+        <div class="review-container">
+            <div class="fake-review">
+                <button class="bk" onclick="prevReview()">&#8249;</button>
+                <div id="fakeReviewBox">
+                    <div class="review-item">
+                        <div class="profile">
+                            <div class="profile-pic">A</div>
+                            <div class="profile-info">
+                                <h4>Andi</h4>
+                                <p>andi@example.com</p>
+                            </div>
+                        </div>
+                        <div class="rating-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="comment">Sangat puas dengan layanan ini!</p>
+                    </div>
+                </div>
+                <button class="bk" onclick="nextReview()">&#8250;</button>
+            </div>
+
+            <br>
+            <br>
+
+            <h1>Foto-foto Para Traveler V&J Travel</h1>
+<section class="traveler-gallery">
+    <div class="photo-slider">
+        <div class="photo-track">
+            <img src="https://awsimages.detik.net.id/community/media/visual/2022/11/21/ilustrasi-liburan-kemping-di-pantai_169.jpeg?w=650" alt="Traveler 1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgMrLd8xWeiw7ojv4pO1umZWmSV6_OrB3Yhw&s" alt="Traveler 2">
+            <img src="https://cdn0-production-images-kly.akamaized.net/owBpKOiMrLD-lny-XNthT5ejeS8=/800x800/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/2847149/original/074012600_1562561188-1.jpg" alt="Traveler 3">
+            <img src="https://img.okezone.com/content/2021/01/08/549/2341255/bella-graceva-liburan-ke-lombok-intip-3-tempat-wisata-eksotis-dikunjunginya-8Hne5m8LkH.jpg" alt="Traveler 4">
+            <img src="https://images.tokopedia.net/blog-tokopedia-com/uploads/2018/10/wisata-tokyo-8-World-Nomads.jpg" alt="Traveler 6">
+            <img src="https://www.hayatuntour.com/wp-content/uploads/2021/01/great-wall-of-china-5483516_640.jpg" alt="Traveler 7">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsOQrSx5yULuc0dfw4wOIWkm1KRhChNkR5CQ&s" alt="Traveler 8">
+            <img src="https://asset-2.tstatic.net/batam/foto/bank/images/liburan-ke-singapura-akan-lebih-hemat.jpg" alt="Traveler 9">
+            <img src="https://asset.kompas.com/crops/0MZVDW7pUTfRXL3vMimcWStN-hs=/0x0:739x493/1200x800/data/photo/2020/04/21/5e9e982505cb4.jpg" alt="Traveler 10">
+        </div>
+    </div>
+</section>
+
+
+            
+<br>
+    <footer>
+        <p>&copy; RevoU Fundamental Course- 2024 V&J Travel</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
